@@ -73,3 +73,32 @@
       if (diasPorSemana <= 0 || diasPorSemana > 7) {
         throw new Error("Dias por semana precisa estar entre 1 e 7.");
       }
+  // Jogos necessários para atingir a meta considerando custos fixos
+      const jogosNecessarios = Math.ceil((metaMensal + custosFixos) / lucroPorJogo);
+
+      // Médias
+      const mediaPorSemana = jogosNecessarios / semanasNoMes;
+      const mediaPorDia = mediaPorSemana / diasPorSemana;
+
+      // Checagens extras (informativas)
+      const receitaBruta = jogosNecessarios * valorPorJogo;
+      const custoVariavel = jogosNecessarios * custoPorJogo;
+      const receitaLiquidaEstimada = receitaBruta - custoVariavel - custosFixos;
+
+      return {
+        lucroPorJogo,
+        jogosNecessarios,
+        mediaPorSemana,
+        mediaPorDia,
+        receitaBruta,
+        custoVariavel,
+        receitaLiquidaEstimada
+      };
+    }
+
+    document.getElementById("btn").addEventListener("click", () => {
+      const msg = document.getElementById("msg");
+      const out = document.getElementById("out");
+      msg.textContent = "";
+      out.style.display = "none";
+      
