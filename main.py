@@ -18,5 +18,5 @@ def read_root():
 
 @app.get("/random")
 def get_random_number():
-    random_number = random.randint(1, 100)
+    random_number = random.randint(1, 1000)
     return {"random_number": random_number}
