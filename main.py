@@ -1,10 +1,11 @@
-hello = "Olá mundo!"
-
-print(hello)
 from fastapi import FastAPI
 import random
 
 app = FastAPI()
+
+hello = "Olá mundo!"
+
+print(hello)
 
 
 @app.get("/")
