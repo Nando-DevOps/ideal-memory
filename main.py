@@ -4,6 +4,10 @@ print(hello)
 from fastapi import FastAPI
 import random
 
+ola = "Hello World"
+
+print(ola)
+
 app = FastAPI()
 
 
