@@ -1,3 +1,6 @@
+hello = "Olá mundo!"
+
+print(hello)
 from fastapi import FastAPI
 import random
 
