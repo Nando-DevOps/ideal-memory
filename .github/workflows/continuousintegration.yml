@@ -14,11 +14,4 @@ jobs:
       - name: Python Lint Code Scanning Action
         uses: advanced-security/python-lint-code-scanning-action@v1.1.3
         with:
-          linter: pylint
-
-      - name: Check Js, Java, HTML and CSS files
-        uses: actions/checkout@v5
-
-      - name: Check for JavaScript, Java, HTML and CSS files
-        run: |
-          find . -type f \( -name "*.js" -o -name "*.java" -o -name "*.html" -o -name "*.css" \) -print
+          linter: pylint, HTMLHint, Stylelint, Checkstyle, Estlint, JSHint
