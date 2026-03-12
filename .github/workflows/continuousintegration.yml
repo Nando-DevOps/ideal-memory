@@ -26,3 +26,4 @@ jobs:
           VALIDATE_JAVASCRIPT_ES: true
           VALIDATE_JAVA: true
           VALIDATE_PYTHON_PYLINT: false
+
