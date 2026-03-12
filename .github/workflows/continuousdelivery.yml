@@ -1,0 +1,20 @@
+name: Continuous Delivery Workflow
+on: 
+  push:
+    branches:
+      - main # ou qualquer outra branch que você queira monitorar para deploy
+
+jobs:
+  delivery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v5
+
+      - name: Simulando Continouous Delivery
+        uses: actions/upload-artifact@v4
+        with:
+          name: projetozipado.zip
+          path: |
+            '**.py # Qualquer arquivo Python que você queira incluir no zip
+            README.md
